@@ -1,9 +1,27 @@
-body {
-        font-family: Arial, sans-serif;
-        background-color: #f4f4f9;
+:root {
+        --primary-color: #007bff;
+        --primary-hover: #0056b3;
+        --text-color: #333;
+        --muted-text: #666;
+        --light-bg: #f4f4f9;
+        --card-bg: #ffffff;
+        --sidebar-bg: #f8f9fa;
+        --footer-bg: #343a40;
+        --link-color: #007bff;
+        --link-hover: #0056b3;
+        --font-family: 'Arial', sans-serif;
 }
+
+body {
+        font-family: var(--font-family);
+        background-color: var(--light-bg);
+        color: var(--text-color);
+        margin: 0;
+        padding: 0;
+}
+
 .header {
-        background-color: #007bff;
+        background-color: var(--primary-color);
         color: white;
         padding: 40px 0;
         text-align: center;
@@ -37,7 +55,7 @@ body {
         border: 1px solid #ddd;
         margin-bottom: 20px;
         padding: 20px;
-        background-color: white;
+        background-color: var(--card-bg);
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -50,17 +68,16 @@ body {
         margin-bottom: 15px;
 }
 .post p {
-        color: #666;
+        color: var(--muted-text);
         line-height: 1.6;
 }
 .post .btn-primary {
-        background-color: #007bff;
+        background-color:  var(--primary-color);
         border: none;
 }
 .post .btn-primary:hover {
-        background-color: #0056b3;
+        background-color:  var(--primary-hover);
 }
-      
 .sidebar {
         background-color: #f8f9fa;
         padding: 20px;
@@ -80,19 +97,19 @@ body {
         margin-bottom: 10px;
 }
 .sidebar ul li a {
-        color: #007bff;
+        color:  var(--link-color);
         text-decoration: none;
 }
 .sidebar ul li a:hover {
         text-decoration: underline;
-    }
+}
 .footer {
-    background-color: #343a40;
-    color: white;
-    text-align: center;
-    padding: 20px;
-    margin-top: 40px;
+        background-color: var(--footer-bg);
+        color: white;
+        text-align: center;
+        padding: 20px;
+        margin-top: 40px;
 }
 .footer p {
-    margin: 0;
+        margin: 0;
 }
